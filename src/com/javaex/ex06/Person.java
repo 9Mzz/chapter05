@@ -1,9 +1,15 @@
 package com.javaex.ex06;
 
 public class Person {
+
+	// 필드
 	private String name;
 	private String hp;
 	private String company;
+
+	// 생성자
+	public Person() {
+	}
 
 	public Person(String name, String hp, String company) {
 		this.name = name;
@@ -11,6 +17,7 @@ public class Person {
 		this.company = company;
 	}
 
+	// 메소드 gs
 	public String getName() {
 		return name;
 	}
@@ -34,12 +41,16 @@ public class Person {
 	public void setCompany(String company) {
 		this.company = company;
 	}
-	
-	public void showInfo() {
-		System.out.println("이름: "+name);
-		System.out.println("핸드폰: "+hp);
-		System.out.println("회사: "+company);
-		System.out.println();
+
+	// 메소드 일반
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", hp=" + hp + ", company=" + company + "]";
 	}
 
+	public String info() {
+		return name+","+hp+","+company;
+	}
+	
+	
 }
